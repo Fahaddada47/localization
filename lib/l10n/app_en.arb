@@ -6,5 +6,9 @@
   "counterMsg": "You have pushed the button this many times",
   "@counterMsg": {
     "description": "You have pushed the button this many times"
+  },
+  "parkingMsg": "Searching for parking?",
+  "@parkingMsg": {
+    "description": "You have pushed the button this many times"
   }
 }

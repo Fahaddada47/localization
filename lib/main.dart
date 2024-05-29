@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:localization/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -83,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: [
           PopupMenuButton<Locale>(
             initialValue: widget.locale,
-            icon: Icon(Icons.language),
+            icon: const Icon(Icons.language),
             itemBuilder: (BuildContext context) {
               return [
                 const PopupMenuItem(
@@ -106,11 +107,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text(AppLocalizations.of(context)!.parkingMsg),
             Text(AppLocalizations.of(context)!.counterMsg),
+
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline6,
             ),
+            ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const WelComePage()),
+              );
+            }, child: const Text("next page"))
           ],
         ),
       ),
