@@ -119,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 context,
                 MaterialPageRoute(builder: (context) => const WelComePage()),
               );
-            }, child: const Text("next page"))
+            }, child:  Text(AppLocalizations.of(context)!.nextPage))
           ],
         ),
       ),

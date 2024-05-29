@@ -10,5 +10,9 @@
   "parkingMsg": "Searching for parking?",
   "@parkingMsg": {
     "description": "You have pushed the button this many times"
+  },
+  "nextPage": "Next Page",
+  "@nextPage": {
+    "description": "You have pushed the button this many times"
   }
 }
