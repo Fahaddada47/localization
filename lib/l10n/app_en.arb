@@ -14,5 +14,9 @@
   "nextPage": "Next Page",
   "@nextPage": {
     "description": "You have pushed the button this many times"
+  },
+  "settingMsg": "Manages the state for the home page.",
+  "@settingMsg": {
+    "description": "setting screen"
   }
 }

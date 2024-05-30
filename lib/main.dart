@@ -10,7 +10,12 @@ void main() {
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static void setLocale(BuildContext context, Locale newLocale) {
+  // static void setLocale(BuildContext context, Locale newLocale) {
+  //   _MyAppState state = context.findAncestorStateOfType<_MyAppState>()!;
+  //   state.setLocale(newLocale);
+  // }
+
+  static void setLocale(BuildContext context, Locale newLocale){
     _MyAppState state = context.findAncestorStateOfType<_MyAppState>()!;
     state.setLocale(newLocale);
   }
@@ -36,7 +41,7 @@ class _MyAppState extends State<MyApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      localizationsDelegates: const [
+      localizationsDelegates:  const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
